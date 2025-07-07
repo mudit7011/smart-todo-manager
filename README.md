@@ -51,8 +51,8 @@ This project demonstrates a full-stack application with a React-based Next.js fr
 *   **`python-dotenv`**: For managing environment variables.
 *   **`requests`**: For making HTTP requests to external APIs (like Groq).
 
-**Database (Assumed):**
-*   **SQLite/PostgreSQL (Assumed)**: A database system for storing tasks and context entries (implied by the `/api/contexts/` and `/api/tasks/` endpoints).
+**Database :**
+*   **SQLite**: A database system for storing tasks and context entries (implied by the `/api/contexts/` and `/api/tasks/` endpoints).
 
 ## 4. Setup and Installation
 
