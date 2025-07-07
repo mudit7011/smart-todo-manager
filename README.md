@@ -1,6 +1,6 @@
 # Smart Task Manager
 
-![Smart Task Manager Screenshot - Add Task Page](https://via.placeholder.com/800x450/E0D9C7/5E544A?text=Smart+Task+Manager+Screenshot)
+![Smart Task Manager Screenshot - Add Task Page](https://github.com/mudit7011/smart-todo-manager/blob/main/frontend/public/image.png?raw=true)
 *(Replace this placeholder with an actual screenshot of your Add Task page with AI suggestions, similar to the one you provided earlier.)*
 
 ## Table of Contents
