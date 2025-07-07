@@ -1,7 +1,6 @@
 # Smart Task Manager
 
 ![Smart Task Manager Screenshot - Add Task Page](https://github.com/mudit7011/smart-todo-manager/blob/main/frontend/public/image.png?raw=true)
-*(Replace this placeholder with an actual screenshot of your Add Task page with AI suggestions, similar to the one you provided earlier.)*
 
 ## Table of Contents
 
@@ -69,8 +68,8 @@ Follow these steps to get the project up and running on your local machine.
 
 1.  **Clone the repository:**
     ```bash
-    git clone <your-repo-url>
-    cd smart-task-manager/backend # Adjust path if your backend is in a different folder
+    git clone https://github.com/mudit7011/smart-todo-manager.git
+    cd smart-todo-manager/backend
     ```
 2.  **Create a virtual environment:**
     ```bash
@@ -79,9 +78,8 @@ Follow these steps to get the project up and running on your local machine.
     ```
 3.  **Install dependencies:**
     ```bash
-    pip install -r requirements.txt # Ensure you have a requirements.txt file with requests, python-dotenv, flask/django etc.
+    pip install -r requirements.txt 
     ```
-    *(If you don't have `requirements.txt`, you'll need to `pip install requests python-dotenv` and your web framework like `Flask` or `Django`.)*
 4.  **Create a `.env` file** in the backend root directory and add your Groq API Key:
     ```
     GROQ_API_KEY="your_groq_api_key_here"
@@ -89,8 +87,6 @@ Follow these steps to get the project up and running on your local machine.
 5.  **Run database migrations** (if applicable for your chosen Python framework).
 6.  **Start the backend server:**
     ```bash
-    # Example for Flask
-    flask run
     # Example for Django
     python manage.py runserver
     ```
@@ -100,15 +96,15 @@ Follow these steps to get the project up and running on your local machine.
 
 1.  **Navigate to the frontend directory:**
     ```bash
-    cd smart-task-manager/frontend # Adjust path if your frontend is in a different folder
+    cd smart-task-manager/frontend
     ```
 2.  **Install dependencies:**
     ```bash
-    npm install # or yarn install
+    npm install 
     ```
 3.  **Start the Next.js development server:**
     ```bash
-    npm run dev # or yarn dev
+    npm run dev 
     ```
     The application should now be accessible at `http://localhost:3000`.
 
@@ -153,12 +149,4 @@ The application integrates with the [Groq API](https://api.groq.com/openai/v1/ch
 *   **Cross-Contextual Analysis**: The AI is instructed through its system message and prompt examples to perform "deep and cross-referential analysis" across all provided context entries, aiming to generate actionable `contextual_suggestions` that link disparate pieces of information.
 *   **Structured Output**: The AI is prompted to return suggestions in a strict JSON format, ensuring structured and reliable data for the frontend.
 
-## 7. Future Enhancements
-
-*   **Task Editing and Status Updates**: Extend task management with options to edit tasks and update their completion status.
-*   **User Authentication**: Implement user login and registration.
-*   **Advanced Context Search**: Allow users to search and filter their context history.
-*   **Notification System**: Set up reminders for deadlines.
-*   **Improved AI Models**: Experiment with different LLMs or fine-tune models for even more tailored suggestions.
-*   **UI/UX Improvements**: Further polish the user interface and experience.
 
