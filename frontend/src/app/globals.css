@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+
+@layer base {
+  body {
+    /* Fallback for the background */
+    @apply bg-gray-100;
+  }
+}
+
+/* --- Your New Radial Gradient Background --- */
+.animated-gradient-bg {
+  background-size: 200% 200%;
+  background-image: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%, /* Pink */
+    rgba(148, 187, 233, 1) 100% /* Blue */
+  );
+  animation: gradient-flow 18s ease infinite; /* A smooth, slow animation */
+}
+
+.add-task-bg {
+  background-size: 200% 200%;
+  background-image: linear-gradient(
+    90deg, 
+    #fcff9e 0%,  /* Bright Yellow */
+    #c67700 100% /* Rich Gold/Brown */
+  );
+  animation: gradient-flow 20s ease infinite;
+}
+
+.context-page-bg {
+  background-size: 200% 200%;
+  background-image: linear-gradient(
+    90deg,
+    #e3ffe7 0%,   /* Light Mint */
+    #d9e7ff 100%  /* Light Sky Blue */
+  );
+  animation: gradient-flow 25s ease infinite; /* A very slow, calming animation */
+}
+
+.history-page-bg {
+  background-size: 200% 200%;
+  background-color: #3a47d5; /* Fallback color */
+  background-image: linear-gradient(
+    90deg,
+    #00d2ff 0%,
+    #3a47d5 100%
+  );
+  animation: gradient-flow 18s ease infinite;
+}
+
+
+@keyframes gradient-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
