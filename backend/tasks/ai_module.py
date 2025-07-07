@@ -43,9 +43,7 @@ def map_ai_category_to_id(ai_suggested_category_name):
 def get_task_suggestions(title, description, category, context_list):
     today_date = datetime.now().strftime("%Y-%m-%d")
     current_year = datetime.now().year
-    
-    # This line is crucial for feeding all context entries to the AI
-    # We join them with a clear separator to help the AI distinguish individual entries
+
     context_text = "\n".join([f"- {item}" for item in context_list]) 
     context_text_with_date = f"Current Date: {today_date}.\nUser's Relevant Context History:\n{context_text}"
 
@@ -163,7 +161,7 @@ Return only JSON:
         "Content-Type": "application/json"
     }
     body = {
-        "model": "llama3-8b-8192", # Keep your chosen model
+        "model": "llama3-8b-8192", # Adjust model as needed
         "messages": [
             {"role": "system", "content": "You are a highly intelligent and proactive task manager AI. Perform comprehensive cross-referential analysis of the user's entire context history to provide insightful and actionable suggestions. Always prioritize user's stated goals and implicit needs derived from context."},
             {"role": "user", "content": prompt}
@@ -182,7 +180,6 @@ Return only JSON:
         response.raise_for_status()
         data = response.json()
         message = data['choices'][0]['message']['content'].strip()
-        print("✅ Groq AI response:", message)
 
         match = re.search(r'{.*}', message, re.DOTALL)
         if match:
@@ -231,8 +228,8 @@ Return only JSON:
         else:
             raise ValueError("No JSON found in Groq response.")
     except Exception as e:
-        print("🛑 Groq API Error:", e)
-        print("🛑 Full Response Text:", response.text if 'response' in locals() else 'No response')
+        print(" Groq API Error:", e)
+        print("Full Response Text:", response.text if 'response' in locals() else 'No response')
         return {
             "enhanced_description": title,
             "suggested_deadline": (datetime.now() + timedelta(days=7)).strftime("%Y-%m-%d"),
